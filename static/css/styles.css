@@ -1,0 +1,215 @@
+/*  * {
+    }        */
+@font-face {
+  font-family: "Netflix";
+  src: url("../../fonts/AvenirNextLTPro-Regular.otf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Netflix";
+  src: url("../../fonts/AvenirNextLTPro-Bold.otf");
+  font-weight: 700;
+}
+
+.credits {
+  font-family: system-ui;
+  background: #212429;
+  font-size: 11px;
+  color: white;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.credits a {
+  color: #f865b0;
+  text-decoration: none;
+}
+.header {
+  /* border: 1px solid white; */
+  padding: 15px 15px 150px;
+  position: relative;
+  z-index: 10;
+  background-image: linear-gradient(
+    to bottom,
+    black 30%,
+    #00000080 70%,
+    transparent 100%
+  );
+}
+body {
+  margin: 0;
+  /* background-color:black; */
+  color: white;
+  background-color: black;
+  font-family: Netflix; /*If haven't spaces between the words i can let it without quotes ("") */
+  /* padding-bottom: 94px; */
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.navigation {
+  list-style: none; /*this property is asigned for ul and li tags*/
+  padding: 0;
+  /* border: 1px solid red; */
+  margin: 0;
+  display: grid;
+  grid-auto-columns: 100px;
+  grid-auto-flow: column;
+  justify-content: space-around;
+}
+.navigation-item {
+  /* border: 1px solid yellow; */
+  text-align: center;
+}
+
+.featured {
+  margin-top: -150px;
+  position: relative;
+  overflow: hidden;
+}
+.featured-details {
+  /* border: 1px solid red; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* width: 100%; */
+  background-image: linear-gradient(
+    to top,
+    black 50%,
+    #00000080 70%,
+    transparent 100%
+  );
+}
+.tags {
+  /* border: 1px solid yellow; */
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+.tag {
+  /* border: 1px solid red; */
+}
+.tag::before {
+  content: "•";
+  margin-right: 5px;
+}
+.tag:first-child::before {
+  display: none;
+}
+.featured-actions {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 2em;
+}
+
+.button {
+  /* border: 1px solid blue; */
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  gap: 5px;
+  padding: 2px 1em;
+  border-radius: 3px;
+  border: none;
+}
+.button::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  /* border: 1px solid red; */
+}
+.button-secondary {
+  color: white;
+  /* text-align: center; */
+  /* display: block; */
+  background-color: transparent;
+  font-size: 1.1em;
+  min-width: 70px;
+  cursor: pointer;
+  border: none;
+}
+.button-secondary::before {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  margin-bottom: 5px;
+}
+.icon-plus::before {
+  background: url(../../images/icons/plus.svg);
+}
+.icon-play::before {
+  background: url(../../images/icons/play.svg);
+}
+.icon-info::before {
+  background: url(../../images/icons/info.svg);
+}
+
+.list-content {
+  overflow: auto;
+  display: flex;
+  gap: 10px;
+}
+.list {
+  padding: 0 1em;
+}
+
+main {
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.footer {
+  /* border: 1px solid red; */
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  /* padding: 1em 0 0; */
+}
+
+.tab-list {
+  list-style: none;
+  /* border: 1px solid red; */
+  display: grid;
+  grid-auto-flow: column;
+  margin: 0;
+  padding: 10px 0;
+}
+.tab-list a {
+  color: #6e6e6e;
+}
+.tab-item {
+  /* border: 1px solid yellow; */
+  text-align: center;
+  /* display: flex; */
+}
+.tab-item svg {
+  margin: auto;
+  display: block;
+  /* border: 1px solid red; */
+}
+.tab-item path {
+  fill: #6e6e6e;
+}
+.tab-item:hover path {
+  fill: white;
+}
+.tab-item:hover span {
+  color: white;
+}
+
+.tab-item span {
+  font-size: 0.9em;
+}
